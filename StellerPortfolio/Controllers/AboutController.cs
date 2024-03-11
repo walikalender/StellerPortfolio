@@ -23,5 +23,43 @@ namespace StellerPortfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult AddAbout()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddAbout(TblAbouts tblAbouts)
+        {
+            db.TblAbouts.Add(tblAbouts);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult UpdateAbout(int id)
+        {
+            var entity = db.TblAbouts.Find(id);
+            return View(entity); // View'e ilgili varlığı gönder
+        }
+
+        [HttpPost]
+        public ActionResult UpdateAbout(TblAbouts tblAbouts)
+        {
+            var updatedAbout = db.TblAbouts.Find(tblAbouts.AboutID);
+
+            updatedAbout.FirstName = tblAbouts.FirstName;
+            updatedAbout.LastName = tblAbouts.LastName;
+            updatedAbout.Description = tblAbouts.Description;
+            updatedAbout.Job = tblAbouts.Job;
+            updatedAbout.CvDownloadUrl = tblAbouts.CvDownloadUrl;
+            updatedAbout.ImageUrl = tblAbouts.ImageUrl;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
     }
+
 }

@@ -1,0 +1,41 @@
+﻿@model StellerPortfolio.Models.TblAbouts
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    /* Siyah kenarlıklar için CSS */
+    form input[type="text"] {
+        border: 1px solid black;
+    }
+</style>
+
+<h3>Hakkımızda Güncelleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <input type="hidden" name="AboutID" value="@Model.AboutID">
+
+    <label>Ad</label>
+    <input type="text" name="FirstName" class="form-control" value="@Model.FirstName">
+
+    <label>Soyad</label>
+    <input type="text" name="LastName" class="form-control" value="@Model.LastName">
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" value="@Model.Description">
+
+    <label>Meslek</label>
+    <input type="text" name="Job" class="form-control" value="@Model.Job">
+
+    <label>Resim Url</label>
+    <input type="text" name="ImageUrl" class="form-control" value="@Model.ImageUrl">
+
+    <label>Cv Url</label>
+    <input type="text" name="CvDownloadUrl" class="form-control" value="@Model.CvDownloadUrl">
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

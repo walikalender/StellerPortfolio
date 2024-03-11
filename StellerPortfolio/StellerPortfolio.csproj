@@ -374,6 +374,11 @@
     <Content Include="Templates\sidebar-02\scss\bootstrap\_utilities.scss" />
     <Content Include="Templates\sidebar-02\scss\bootstrap\_variables.scss" />
     <Content Include="Templates\sidebar-02\scss\style.scss" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Shared\PartialHead.cshtml" />
+    <Content Include="Views\Shared\PartialScript.cshtml" />
+    <Content Include="Views\Shared\PartialSidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
