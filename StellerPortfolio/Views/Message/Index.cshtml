@@ -1,4 +1,4 @@
-﻿
+﻿@model List<StellerPortfolio.Models.TblMessage>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -14,16 +14,16 @@
         <th>Ad Soyad</th>
         <th>Mesaj İçeriği</th>
     </tr>
-
-    <tr>
-        <td>1</td>
-        <td>walikalender@gmail.com</td>
-        <td>Muhammed Ali KALENDER</td>
-        <td>Lorem Ipsum</td>
-        <td>
-            <a href="#" class="btn btn-danger">Delete</a>
-            <a href="#" class="btn btn-info">Update</a>
-        </td>
-    </tr>
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageID</td>
+            <td>@item.Email</td>
+            <td>@item.NameSurname</td>
+            <td>@item.MessageContent</td>
+            <td>
+                <a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+    }
 </table>

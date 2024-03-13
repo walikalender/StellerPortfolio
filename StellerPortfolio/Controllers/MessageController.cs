@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StellerPortfolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,18 @@ namespace StellerPortfolio.Controllers
 {
     public class MessageController : Controller
     {
+        StellerAcunMedyaDBEntities db = new StellerAcunMedyaDBEntities();
         public ActionResult Index()
         {
-            return View();
+            var messageList = db.TblMessage.ToList();
+            return View(messageList);
+        }
+        public ActionResult DeleteMessage(int id)
+        {
+            var entity = db.TblMessage.Find(id);
+            db.TblMessage.Remove(entity);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
