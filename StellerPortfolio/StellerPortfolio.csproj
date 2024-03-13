@@ -379,6 +379,8 @@
     <Content Include="Views\Shared\PartialHead.cshtml" />
     <Content Include="Views\Shared\PartialScript.cshtml" />
     <Content Include="Views\Shared\PartialSidebar.cshtml" />
+    <Content Include="Views\Contact\AddContact.cshtml" />
+    <Content Include="Views\Contact\UpdateContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

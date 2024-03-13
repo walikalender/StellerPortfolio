@@ -1,4 +1,4 @@
-﻿
+﻿@model List<StellerPortfolio.Models.TblContact>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -14,19 +14,23 @@
         <th>Eposta</th>
         <th>Harita Url</th>
     </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactID</td>
+            <td>@item.Address</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.MapUrl</td>
 
-    <tr>
-        <td>1</td>
-        <td>Osmaniye Merkez</td>
-        <td>(555) 555 55 55</td>
-        <td>walikalender@gmail.com</td>
-        <td>Maps Url</td>
-        <td>
-            <a class="btn btn-danger">Delete</a>
-            <a class="btn btn-info">Update</a>
-        </td>
-    </tr>
+            <td>
+                <a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger">Delete</a>
+                <a href="/Contact/UpdateContact/@item.ContactID" class="btn btn-info">Update</a>
+            </td>
+        </tr>
+    }
 
 </table>
+</br>
 
-
+<a href="/Contact/AddContact/" class="btn btn-success">Ekle</a>

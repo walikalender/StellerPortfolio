@@ -1,0 +1,36 @@
+﻿@model StellerPortfolio.Models.TblContact
+
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    /* Siyah kenarlıklar için CSS */
+    form input[type="text"] {
+        border: 1px solid black;
+    }
+</style>
+
+<h3>Hakkımızda Güncelleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <input type="hidden" name="ContactID" value="@Model.ContactID">
+
+    <label>Adres</label>
+    <input type="text" name="Address" class="form-control" value="@Model.Address">
+
+    <label>Eposta</label>
+    <input type="text" name="Email" class="form-control" value="@Model.Email">
+
+    <label>Telefon</label>
+    <input type="text" name="Phone" class="form-control" value="@Model.Phone">
+
+    <label>Harita Url</label>
+    <input type="text" name="MapUrl" class="form-control" value="@Model.MapUrl">
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+

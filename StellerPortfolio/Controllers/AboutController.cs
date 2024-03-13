@@ -59,7 +59,6 @@ namespace StellerPortfolio.Controllers
 
             return RedirectToAction("Index");
         }
-
     }
 
 }
