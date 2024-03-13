@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "AddAbout";
+﻿
+@{
+    ViewBag.Title = "AddTestimonial";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -10,7 +11,7 @@
     }
 </style>
 
-<h3>Hakkımda Ekleme Sayfası</h3>
+<h3>Referans Ekleme Sayfası</h3>
 
 </br>
 
@@ -21,17 +22,16 @@
     <label>Soyad</label>
     <input type="text" name="LastName" class="form-control">
 
-    <label>Açıklama</label>
-    <input type="text" name="Description" class="form-control">
-
     <label>Meslek</label>
     <input type="text" name="Job" class="form-control">
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control">
 
     <label>Resim Url</label>
     <input type="text" name="ImageUrl" class="form-control">
 
-    <label>Cv Url</label>
-    <input type="text" name="CvDownloadUrl" class="form-control">
     </br>
     <button type="submit" class="btn btn-success">Ekle</button>
 </form>
+

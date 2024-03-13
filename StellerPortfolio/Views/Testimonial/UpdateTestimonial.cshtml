@@ -1,7 +1,6 @@
-﻿@model StellerPortfolio.Models.TblAbouts
-
+﻿@model StellerPortfolio.Models.TblTestimonials
 @{
-    ViewBag.Title = "UpdateAbout";
+    ViewBag.Title = "UpdateTestimonial";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -12,12 +11,12 @@
     }
 </style>
 
-<h3>Hakkımda Güncelleme Sayfası</h3>
+<h3>Hakkımızda Güncelleme Sayfası</h3>
 
 </br>
 
 <form method="post">
-    <input type="hidden" name="AboutID" value="@Model.AboutID">
+    <input type="hidden" name="TestimonialID" value="@Model.TestimonialID">
 
     <label>Ad</label>
     <input type="text" name="FirstName" class="form-control" value="@Model.FirstName">
@@ -25,17 +24,16 @@
     <label>Soyad</label>
     <input type="text" name="LastName" class="form-control" value="@Model.LastName">
 
-    <label>Açıklama</label>
-    <input type="text" name="Description" class="form-control" value="@Model.Description">
-
     <label>Meslek</label>
     <input type="text" name="Job" class="form-control" value="@Model.Job">
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" value="@Model.Description">
 
     <label>Resim Url</label>
     <input type="text" name="ImageUrl" class="form-control" value="@Model.ImageUrl">
 
-    <label>Cv Url</label>
-    <input type="text" name="CvDownloadUrl" class="form-control" value="@Model.CvDownloadUrl">
-
     <button type="submit" class="btn btn-success">Güncelle</button>
 </form>
+
+

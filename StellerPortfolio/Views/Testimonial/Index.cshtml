@@ -1,4 +1,4 @@
-﻿
+﻿@model List<StellerPortfolio.Models.TblTestimonials>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -15,17 +15,22 @@
         <th>Meslek</th>
         <th>Resim</th>
     </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestimonialID</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.Job</td>
+            <td>@item.Description</td>
+            <td><img src="@item.ImageUrl" / height="50px" width="50px"></td>
+            <td>
+                <a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a>
+                <a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-info">Güncelle</a>
+            </td>
+        </tr>
+    }
 
-    <tr>
-        <td>1</td>
-        <td>Muhammed Ali</td>
-        <td>KALENDER</td>
-        <td>Lorem Ipsum</td>
-        <td>UI/UX Tasarımcısı</td>
-        <td><img src="https://t3.ftcdn.net/jpg/03/28/19/46/360_F_328194664_RKSHvMLgHphnD1nwQYb4QKcNeEApJmqa.jpg" / height="50px" width="50px"></td>
-        <td>
-            <a href="#" class="btn btn-danger">Delete</a>
-            <a href="#" class="btn btn-info">Update</a>
-        </td>
-    </tr>
 </table>
+</br>
+<a href="/Testimonial/AddTestimonial" class="btn btn-info">Add</a>

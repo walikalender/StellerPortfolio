@@ -383,6 +383,16 @@
     <Content Include="Views\Contact\UpdateContact.cshtml" />
     <Content Include="Views\Feature\UpdateFeature.cshtml" />
     <Content Include="Views\Feature\AddFeature.cshtml" />
+    <Content Include="Views\Project\AddProject.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\Service\UpdateService.cshtml" />
+    <Content Include="Views\Service\AddService.cshtml" />
+    <Content Include="Views\Skill\AddSkill.cshtml" />
+    <Content Include="Views\Skill\UpdateSkill.cshtml" />
+    <Content Include="Views\SocialMedia\AddSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

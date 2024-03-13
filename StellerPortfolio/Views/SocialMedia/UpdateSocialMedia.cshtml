@@ -1,0 +1,25 @@
+﻿@model StellerPortfolio.Models.TblSocialMedias
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Sosyal Medya Güncelleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <input type="hidden" name="SocialMediaID" value="@Model.SocialMediaID">
+
+    <label>Hizmet Adı</label>
+    <input type="text" name="SocialMediaName" class="form-control" value="@Model.SocialMediaName">
+
+    <label>Icon Url</label>
+    <input type="text" name="Icon" class="form-control" value="@Model.Icon">
+
+    <label>Durum</label>
+    <input type="text" name="LinkUrl" class="form-control" value="@Model.LinkUrl">
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+

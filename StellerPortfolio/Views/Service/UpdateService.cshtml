@@ -1,0 +1,25 @@
+﻿@model StellerPortfolio.Models.TblServices
+
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Hizmet Güncelleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <input type="hidden" name="ServiceID" value="@Model.ServiceID">
+
+    <label>Hizmet Adı</label>
+    <input type="text" name="ServiceName" class="form-control" value="@Model.ServiceName">
+
+    <label>Icon Url</label>
+    <input type="text" name="ServiceIconUrl" class="form-control" value="@Model.ServiceIconUrl">
+
+    <label>Durum</label>
+    <input type="text" name="ServiceStatus" class="form-control" value="@Model.ServiceStatus">
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

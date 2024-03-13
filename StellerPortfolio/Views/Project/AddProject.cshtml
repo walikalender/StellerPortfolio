@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "AddAbout";
+    ViewBag.Title = "AddProject";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -10,28 +10,26 @@
     }
 </style>
 
-<h3>Hakkımda Ekleme Sayfası</h3>
+<h3>Proje Ekleme Sayfası</h3>
 
 </br>
 
 <form method="post">
-    <label>Ad</label>
-    <input type="text" name="FirstName" class="form-control">
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control">
 
-    <label>Soyad</label>
-    <input type="text" name="LastName" class="form-control">
+    <label>Proje Adı</label>
+    <input type="text" name="ProjectName" class="form-control">
 
     <label>Açıklama</label>
     <input type="text" name="Description" class="form-control">
 
-    <label>Meslek</label>
-    <input type="text" name="Job" class="form-control">
-
     <label>Resim Url</label>
     <input type="text" name="ImageUrl" class="form-control">
 
-    <label>Cv Url</label>
-    <input type="text" name="CvDownloadUrl" class="form-control">
+    <label>Proje Url</label>
+    <input type="text" name="ProjectLinkUrl" class="form-control">
     </br>
     <button type="submit" class="btn btn-success">Ekle</button>
 </form>
+

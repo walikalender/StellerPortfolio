@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    /* Siyah kenarlıklar için CSS */
+    form input[type="text"] {
+        border: 1px solid black;
+    }
+</style>
+
+<h3>Yetenek Ekleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control">
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control">
+
+    <label>Yetenek Adı</label>
+    <input type="text" name="SkillName" class="form-control">
+
+    <label>Yetenek Yüzdesi</label>
+    <input type="text" name="Value" class="form-control">
+
+    </br>
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>
+
+

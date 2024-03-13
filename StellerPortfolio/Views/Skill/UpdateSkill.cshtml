@@ -1,0 +1,36 @@
+﻿@model StellerPortfolio.Models.TblSkills
+
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    /* Siyah kenarlıklar için CSS */
+    form input[type="text"] {
+        border: 1px solid black;
+    }
+</style>
+
+<h3>Öne Çıkan Güncelleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <input type="hidden" name="SkillID" value="@Model.SkillID">
+
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" value="@Model.Title">
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" value="@Model.Description">
+
+    <label>Yetenek Adı</label>
+    <input type="text" name="SkillName" class="form-control" value="@Model.SkillName">
+
+    <label>Yetenek Yüzdesi</label>
+    <input type="text" name="Value" class="form-control" value="@Model.Value">
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    /* Siyah kenarlıklar için CSS */
+    form input[type="text"] {
+        border: 1px solid black;
+    }
+</style>
+
+<h3>Hizmet Ekleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <label>Hizmet</label>
+    <input type="text" name="ServiceName" class="form-control">
+
+    <label>Icon Url</label>
+    <input type="text" name="ServiceIconUrl" class="form-control">
+
+    <label>Durum</label>
+    <input type="text" name="ServiceStatus" class="form-control">
+
+    </br>
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>
+
+
+
+

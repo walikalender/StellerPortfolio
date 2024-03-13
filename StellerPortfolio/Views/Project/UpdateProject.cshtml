@@ -1,0 +1,32 @@
+﻿@model StellerPortfolio.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Proje Güncelleme Sayfası</h3>
+
+</br>
+
+<form method="post">
+    <input type="hidden" name="ProjectID" value="@Model.ProjectID">
+
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" value="@Model.Title">
+
+    <label>Proje Adı</label>
+    <input type="text" name="ProjectName" class="form-control" value="@Model.ProjectName">
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" value="@Model.Description">
+
+    <label>Resim Url</label>
+    <input type="text" name="ImageUrl" class="form-control" value="@Model.ImageUrl">
+
+    <label>Proje Url</label>
+    <input type="text" name="ProjectLinkUrl" class="form-control" value="@Model.ProjectLinkUrl">
+    </br>
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+
+

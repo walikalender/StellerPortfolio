@@ -1,4 +1,5 @@
-﻿
+﻿@model List<StellerPortfolio.Models.TblSkills>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -15,15 +16,21 @@
         <th>Yetenek Yüzdesi</th>
     </tr>
 
-    <tr>
-        <td>1</td>
-        <td>Yeteneklerim</td>
-        <td>Lorem Ipsum</td>
-        <td>SQL</td>
-        <td>95</td>
-        <td>
-            <a href="#" class="btn btn-danger">Delete</a>
-            <a href="#" class="btn btn-info">Update</a>
-        </td>
-    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SkillID</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.SkillName</td>
+            <td>@item.Value</td>
+            <td>
+                <a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-danger">Sil</a>
+                <a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-info">Güncelle</a>
+            </td>
+        </tr>
+    }
+
 </table>
+</br>
+<a href="/Skill/AddSkill" class="btn btn-success">Add</a>
