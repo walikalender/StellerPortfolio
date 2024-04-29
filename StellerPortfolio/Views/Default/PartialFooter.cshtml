@@ -1,0 +1,21 @@
+﻿@model List<StellerPortfolio.Models.TblSocialMedias>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-6">
+                <p>
+                    Copyright &copy; @DateTime.Now.Year <a href="http://www.devcrud.com" target="_blank">Portfolyo</a>
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="socials">
+                    @foreach (var item in Model)
+                    {
+                        <a class="social-item" href="@item.LinkUrl"><i class="@item.Icon"></i></a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

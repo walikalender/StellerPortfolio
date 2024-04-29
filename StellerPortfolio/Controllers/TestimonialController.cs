@@ -9,7 +9,7 @@ namespace StellerPortfolio.Controllers
 {
     public class TestimonialController : Controller
     {
-        StellerAcunMedyaDBEntities db = new StellerAcunMedyaDBEntities();
+        private readonly StellerAcunMedyaDbEntities db = new StellerAcunMedyaDbEntities();
 
         public ActionResult Index()
         {

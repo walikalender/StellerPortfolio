@@ -1,0 +1,22 @@
+﻿@model List<StellerPortfolio.Models.TblAbouts>
+
+
+<section id="about" class="section mt-3">
+    <div class="container mt-5">
+        <div class="row text-center text-md-left">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+                    <img src="~/Templates/steller/public_html/assets/imgs/@item.ImageUrl" alt="" class="img-thumbnail mb-4">
+                </div>
+                <div class="pl-md-4 col-md-9">
+                    <h6 class="title">@item.FirstName @item.LastName</h6>
+                    <p class="subtitle">@item.Job</p>
+                    <p>@item.Description</p>
+                    <button class="btn btn-dark rounded mt-3">CV İndir</button>
+                    <button class="btn btn-primary rounded mt-3">İletişime Geçin!</button>
+                </div>
+            }
+        </div>
+    </div>
+</section>

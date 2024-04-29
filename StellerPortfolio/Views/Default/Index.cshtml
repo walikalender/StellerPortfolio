@@ -1,0 +1,58 @@
+﻿@{
+    Layout="~/Views/UILayout/Index.cshtml";
+}
+
+<!-- Page Header -->
+@Html.Action("PartialFeature")
+<!-- End of Page Header -->
+<!-- About section -->
+@Html.Action("PartialAbout")
+<!-- Service section -->
+@Html.Action("PartialService")
+<!-- End of Sectoin -->
+<!-- Skills section -->
+@Html.Action("PartialSkill")
+<!-- End of Skills sections -->
+<!-- Portfolio section -->
+@Html.Action("PartialProject")
+<!-- End of portfolio section -->
+<!-- Testmonial Section -->
+@Html.Action("PartialTestimonail")
+<!-- End of testmonial section -->
+<!-- Hire me section -->
+<section class="bg-gray p-0 section">
+    <div class="container">
+        <div class="card bg-primary">
+            <div class="card-body text-light">
+                <div class="row align-items-center">
+                    <div class="col-sm-9 text-center text-sm-left">
+                        <h5 class="mt-3">Proje Bazlı Çalışmalarınıza Destek Verebilirim.</h5>
+                        <p class="mb-3">Web ve Masaüstü Uygulamaları için benimle iletişime geçebilirsiniz.</p>
+                    </div>
+                    <div class="col-sm-3 text-center text-sm-right">
+                        <a class="btn btn-light rounded" href="#contact">İletişime Geç!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End od Hire me section. -->
+<!-- Contact Section -->
+<section id="contact" class="position-relative section">
+    <div class="container text-center">
+        <h6 class="subtitle">Contact</h6>
+        <h6 class="section-title mb-4">Benimle İletişime Geçebilirsiniz.</h6>
+        <p class="mb-5 pb-4">Her türlü soru ve proje çalışmaları için benimle aşağıdaki formdan </p>
+        iletişime geçebilirsiniz.
+        <div class="contact text-left">
+
+            @Html.Action("SendMessage")
+            @Html.Action("PartialContact")
+
+
+</section>
+<!-- End of Contact Section -->
+@Html.Action("PartialFooter")
+
+

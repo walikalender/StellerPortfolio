@@ -9,10 +9,9 @@ namespace StellerPortfolio.Controllers
 {
     public class AboutController : Controller
     {
-        StellerAcunMedyaDBEntities db = new StellerAcunMedyaDBEntities();
+       private readonly StellerAcunMedyaDbEntities db = new StellerAcunMedyaDbEntities();
         public ActionResult Index()
         {
-
             var aboutList = db.TblAbouts.ToList();
             return View(aboutList);
         }
