@@ -1,26 +1,32 @@
-﻿@model List<StellerPortfolio.Models.TblSkills>
+﻿﻿@model List<StellerPortfolio.Models.TblSkills>
+
 
 <section class="section">
     <div class="container text-center">
-        <h6 class="subtitle">Yeteneklerim</h6>
-        @foreach (var item in Model)
-        {
-            <h6 class="section-title mb-4">@item.Title</h6>
-            <p class="mb-5 pb-4">@item.Description</p>
-        }
+        <h6 class="subtitle">Hakim Olduğum Teknolojiler</h6>
 
-    <div class="row text-left">
 
-        @foreach (var item in Model)
-        {
-            <div class="col-sm-6">
-                <h6 class="mb-3">@item.SkillName</h6>
-                <div class="progress">
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: @item.Value%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>@item.Value%</span></div>
+
+        <h6 class="section-title mb-4">Yeteneklerim</h6>
+        <p class="mb-5 pb-4">
+            NET ve SQL gibi teknolojilerde derin bir bilgi birikimim bulunmaktadır. Projelerimde Autofac gibi bağımlılık enjeksiyonu çözümlerini tercih ederim ve JWT ile kimlik doğrulama işlemlerini güvenle gerçekleştiririm. Redis Cache'i veri depolama ve önbellekleme için etkin bir şekilde kullanırım. Yazılım mimarisi konusunda katmanlı mimari ve SOLID prensiplerine uygun çözümler üretirim.
+
+            Performans yönetimi konusunda uzmanlaşmış olup, uygulama güvenliği ve performans optimizasyonu gibi konularda geniş bir deneyime sahibim. Ayrıca, FluentValidation gibi validasyon kütüphanelerini kullanarak geliştirdiğim çözümleri güvenilir hale getiririm. Proje yönetimi alanında da başarılı bir geçmişe sahibim ve ekip çalışması içerisinde verimli bir şekilde çalışırım.
+
+        </p>
+
+
+        <div class="row text-left">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6">
+                    <h6 class="mb-3">@item.SkillName</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: @item.Value%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>@item.Value%</span></div>
+                    </div>
                 </div>
-            </div>
-
-        }
-    </div>
+            }
         </div>
-    </section>
+    </div>
+</section>

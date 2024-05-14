@@ -1,23 +1,84 @@
-﻿@model StellerPortfolio.Models.TblUsers
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-@{
-    Layout = null;
-}
+        .login-container {
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: -50px auto 0; /* Otomatik yatay hizalama, -50px üstte */
+        }
 
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
-<div class="container align-content-center">
-    <form method="post">
 
-        <label>Kullanıcı Adı</label>
-        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
-        <br />
-        <label>Şifreniz</label>
-        <input type="password" name="Password" class="form-control" />
-        <br />
-        <p style="color:red"> @Html.ValidationSummary() </p>
+            .login-container h2 {
+                color: #333;
+            }
 
-        <button class="btn btn-primary">Giriş Yap</button>
-    </form>
+            .login-container input[type="text"],
+            .login-container input[type="password"] {
+                width: 100%;
+                padding: 12px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 5px;
+                background: #f2f2f2;
+            }
 
-</div>
+            .login-container button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                .login-container button:hover {
+                    opacity: 0.8;
+                }
+
+            .login-container p.error-message {
+                color: red;
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Kullanıcı Adı" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+            <p class="error-message">@Html.ValidationSummary()</p>
+        </form>
+    </div>
+</body>
+</html>

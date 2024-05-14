@@ -159,6 +159,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblAbouts.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblContact.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblFeatures.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblMessage.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblProject.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblServices.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblSkills.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblSocialMedias.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblTestimonials.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblUsers.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -233,6 +260,9 @@
     <Content Include="Templates\steller\gulpfile.js" />
     <Content Include="Templates\steller\LICENSE.txt" />
     <Content Include="Templates\steller\public_html\assets\css\steller.css" />
+    <Content Include="Templates\steller\public_html\assets\imgs\3c.jpeg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\ahmet.jpeg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\ali2.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\avatar-1.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\avatar-2.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\avatar-3.jpg" />
@@ -240,14 +270,23 @@
     <Content Include="Templates\steller\public_html\assets\imgs\blog-1.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\blog-2.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\blog-3.jpg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\chatgpt.png" />
+    <Content Include="Templates\steller\public_html\assets\imgs\festava.jpeg" />
     <Content Include="Templates\steller\public_html\assets\imgs\folio-1.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\folio-2.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\folio-3.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\folio-4.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\folio-5.jpg" />
     <Content Include="Templates\steller\public_html\assets\imgs\folio-6.jpg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\guner.jpeg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\holablog.png" />
     <Content Include="Templates\steller\public_html\assets\imgs\logo.svg" />
     <Content Include="Templates\steller\public_html\assets\imgs\man.svg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\ali.jpg" />
+    <Content Include="Templates\steller\public_html\assets\imgs\maske.png" />
+    <Content Include="Templates\steller\public_html\assets\imgs\northwind.png" />
+    <Content Include="Templates\steller\public_html\assets\imgs\portföy.png" />
+    <Content Include="Templates\steller\public_html\assets\imgs\rentacar.png" />
     <Content Include="Templates\steller\public_html\assets\js\steller.js" />
     <Content Include="Templates\steller\public_html\assets\vendors\bootstrap\bootstrap.affix.js" />
     <Content Include="Templates\steller\public_html\assets\vendors\bootstrap\bootstrap.bundle.js" />
@@ -528,6 +567,9 @@
     <Content Include="Views\Default\PartialContact.cshtml" />
     <Content Include="Views\Default\PartialFooter.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Default\PartialSocialMedia.cshtml" />
+    <Content Include="Views\Message\MessageDetail.cshtml" />
+    <Content Include="Views\Message\ReadMessages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

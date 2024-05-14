@@ -2,28 +2,33 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
-<h2>Mesaj Sayfası</h2>
+<h3>Yeni Mesajlar</h3>
+
+<a class="btn btn-outline-dark" href="/Message/ReadMessages">Okunan Mesajlar</a>
 
 <table class="table table-bordered">
 
     <tr>
         <th>#</th>
-        <th>Eposta</th>
-        <th>Ad Soyad</th>
-        <th>Mesaj İçeriği</th>
+        <th>Gönderen Ad Soyad</th>
+        <th>Gönderen Email </th>
+        <th>Sil</th>
+        <th>Mesajı Aç</th>
     </tr>
+
     @foreach (var item in Model)
     {
+        count++;
         <tr>
-            <td>@item.MessageID</td>
-            <td>@item.Email</td>
+            <th>@count</th>
             <td>@item.NameSurname</td>
-            <td>@item.MessageContent</td>
-            <td>
-                <a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-danger">Sil</a>
-            </td>
+            <td>@item.Email</td>
+            <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-outline-danger">Sil</a></td>
+
+            <td><a href="/Message/MessageDetail/@item.MessageID" class="btn btn-outline-primary">Mesajı Aç</a></td>
         </tr>
     }
 </table>

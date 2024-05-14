@@ -8,13 +8,13 @@
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblAbouts" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblContact" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblFeatures" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblMessage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblProject" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblServices" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblSkills" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblSocialMedias" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblTestimonials" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblUsers" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblUsers" Width="1.5" PointX="2.625" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblMessage" Width="1.5" PointX="4.875" PointY="0.75" />
+        <EntityTypeShape EntityType="StellerAcunMedyaDbModel.TblSkills" Width="1.5" PointX="7.125" PointY="4" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

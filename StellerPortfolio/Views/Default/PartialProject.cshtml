@@ -4,14 +4,15 @@
     <div class="container text-center">
         <h6 class="subtitle">Projelerim</h6>
         <h6 class="section-title mb-4">Geliştirdiğim Projelerime Göz Atın.</h6>
-        <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+        <p class="mb-5 pb-4">Benimle birlikte geliştirdiğim projeleri inceleyerek, çalışma tarzım hakkında daha fazla bilgi edinebilirsiniz. Her bir proje, titizlikle tasarlanmış ve geliştirilmiş, benim beceri setimi ve iş deneyimimi yansıtan birer örnektir. Sektörlere özel çözümlerden, geniş kitlelere hitap eden uygulamalara kadar çeşitli projelerde çalıştım. Projelerim hakkında daha detaylı bilgi almak için lütfen benimle iletişime geçin.</p>
+
 
         <div class="row">
             @foreach (var item in Model)
             {
                 <div class="col-sm-4">
                     <div class="img-wrapper">
-                        <img src="~/Templates/steller/public_html/assets/imgs/@item.ImageUrl" />"" alt="">
+                        <img src="~/Templates/steller/public_html/assets/imgs/@item.ImageUrl" />
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <h5>@item.Title</h5>

@@ -15,6 +15,8 @@
         <th>Açıklama</th>
         <th>Resim</th>
         <th>Proje Linki</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
 
     @foreach (var item in Model)
@@ -25,16 +27,18 @@
             <td>@item.Title</td>
             <td>@item.ProjectName</td>
             <td>@item.Description</td>
-            <td><img src="@item.ImageUrl" / height="50px" width="50px"></td>
+            <td><img src="@item.ImageUrl" style="height: 50px; width: 50px;" /></td>
             <td>@item.ProjectLinkUrl</td>
             <td>
                 <a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
                 <a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-info">Güncelle</a>
             </td>
         </tr>
     }
 
 </table>
-</br>
+<br />
 
 <a href="/Project/AddProject/" class="btn btn-success">Ekle</a>

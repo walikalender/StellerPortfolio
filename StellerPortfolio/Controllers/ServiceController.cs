@@ -48,10 +48,25 @@ namespace StellerPortfolio.Controllers
 
             updateEntity.ServiceName=tblServices.ServiceName;
             updateEntity.ServiceIconUrl=tblServices.ServiceIconUrl;
-            updateEntity.ServiceStatus=tblServices.ServiceStatus;
+            updateEntity.ServiceStatus=true;
 
             db.SaveChanges();
 
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult MakeActive(int id)
+        {
+            var result = db.TblServices.Find(id);
+            result.ServiceStatus=true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult MakePassive(int id)
+        {
+            var result = db.TblServices.Find(id);
+            result.ServiceStatus=false;
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
     }

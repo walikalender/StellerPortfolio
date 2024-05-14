@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
 <h2>Hakkımda Sayfası</h2>
 
 <table class="table table-bordered">
@@ -17,7 +16,10 @@
         <th>Meslek</th>
         <th>Resim</th>
         <th>Cv</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
+
     @foreach (var item in Model)
     {
         <tr>
@@ -26,17 +28,18 @@
             <td>@item.LastName</td>
             <td>@item.Description</td>
             <td>@item.Job</td>
-            <td><img src="@item.ImageUrl" style="height=50px; width=50px;"></td>
+            <td><img src="@item.ImageUrl" style="height:50px; width:50px;"></td>
             <td>@item.CvDownloadUrl</td>
             <td>
                 <a href="/About/DeleteAbout/@item.AboutID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
                 <a href="/About/UpdateAbout/@item.AboutID" class="btn btn-info">Güncelle</a>
             </td>
         </tr>
     }
-
 </table>
 
-</br>
+<br />
 
 <a href="/About/AddAbout/" class="btn btn-success">Ekle</a>

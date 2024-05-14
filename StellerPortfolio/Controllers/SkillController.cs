@@ -13,8 +13,8 @@ namespace StellerPortfolio.Controllers
 
         public ActionResult Index()
         {
-            var SkillList = db.TblSkills.ToList();
-            return View(SkillList);
+            var skillList = db.TblSkills.ToList();
+            return View(skillList);
         }
         public ActionResult DeleteSkill(int id)
         {
@@ -46,8 +46,6 @@ namespace StellerPortfolio.Controllers
         {
             var updateEntity = db.TblSkills.Find(TblSkills.SkillID);
 
-            updateEntity.Title= TblSkills.Title;
-            updateEntity.Description= TblSkills.Description;
             updateEntity.SkillName= TblSkills.SkillName;
             updateEntity.Value= TblSkills.Value;
 

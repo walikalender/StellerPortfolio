@@ -12,21 +12,18 @@
 
                 <div class="buttons pt-3">
                     <button class="btn btn-primary rounded">İletişime Geçin!</button>
-                    <button class="btn btn-dark rounded" href="@item.ImageUrl" formtarget="_parent">CV İndir</button>
+                    <a class="btn btn-dark rounded" href="@item.ImageUrl" formtarget="_parent">CV İndir</a>
                 </div>
 
-                <div class="socials mt-4">
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
-                </div>
+                @Html.Action("PartialSocialMedia")
+
             </div>
             <div class="img-holder">
                 <img src="~/Templates/steller/public_html/assets/imgs/@item.ImageUrl" alt="">
             </div>
         </div>
     }
+
 
 
     <!-- Header-widget -->

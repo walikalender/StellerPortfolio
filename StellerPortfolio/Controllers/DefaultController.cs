@@ -66,7 +66,12 @@ namespace StellerPortfolio.Controllers
         {
             var result = db.TblTestimonials.ToList();
             return PartialView(result);
-        } 
+        }
+        public PartialViewResult PartialSocialMedia()
+        {
+            var result = db.TblSocialMedias.ToList();
+            return PartialView(result);
+        }
         public PartialViewResult PartialContact()
         {
             var result = db.TblContact.ToList();

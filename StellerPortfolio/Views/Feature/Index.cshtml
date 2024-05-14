@@ -17,6 +17,8 @@
         <th>Başlık</th>
         <th>Cv</th>
         <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
 
     @foreach (var item in Model)
@@ -32,12 +34,14 @@
 
             <td>
                 <a href="/Feature/DeleteFeature/@item.FeatureID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
                 <a href="/Feature/UpdateFeature/@item.FeatureID" class="btn btn-info">Güncelle</a>
             </td>
         </tr>
     }
 
 </table>
-</br>
+<br />
 
 <a href="/Feature/AddFeature/" class="btn btn-success">Ekle</a>

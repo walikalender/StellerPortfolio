@@ -12,21 +12,24 @@
         <th>Sosyal Medya Adı</th>
         <th>Icon Url</th>
         <th>Link Url</th>
-        <th>Actions</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.SocialMediaID</td>
             <td>@item.SocialMediaName</td>
-            <td><img src="@item.Icon" height="50px" width="50px" alt="Instagram Icon"></td>
+            <td><img src="@item.Icon" style="height: 50px; width: 50px;" alt="Instagram Icon"></td>
             <td><a href="@item.LinkUrl">@item.LinkUrl</a></td>
             <td>
                 <a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
                 <a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-info">Güncelle</a>
             </td>
         </tr>
     }
 </table>
-</br>
+<br />
 <a href="/SocialMedia/AddSocialMedia" class="btn btn-info">Add</a>

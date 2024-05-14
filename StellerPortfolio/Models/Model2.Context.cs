@@ -28,12 +28,12 @@ namespace StellerPortfolio.Models
         public virtual DbSet<TblAbouts> TblAbouts { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblFeatures> TblFeatures { get; set; }
-        public virtual DbSet<TblMessage> TblMessage { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblServices> TblServices { get; set; }
-        public virtual DbSet<TblSkills> TblSkills { get; set; }
         public virtual DbSet<TblSocialMedias> TblSocialMedias { get; set; }
         public virtual DbSet<TblTestimonials> TblTestimonials { get; set; }
         public virtual DbSet<TblUsers> TblUsers { get; set; }
+        public virtual DbSet<TblMessage> TblMessage { get; set; }
+        public virtual DbSet<TblSkills> TblSkills { get; set; }
     }
 }

@@ -12,15 +12,27 @@ namespace StellerPortfolio.Controllers
         private readonly StellerAcunMedyaDbEntities db = new StellerAcunMedyaDbEntities();
         public ActionResult Index()
         {
-            var messageList = db.TblMessage.ToList();
-            return View(messageList);
+            var result = db.TblMessage.Where(m=>m.IsRead==false).ToList();
+            return View(result);
         }
         public ActionResult DeleteMessage(int id)
         {
-            var entity = db.TblMessage.Find(id);
-            db.TblMessage.Remove(entity);
+            var result = db.TblMessage.Find(id);
+            db.TblMessage.Remove(result);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult MessageDetail(int id)
+        {
+            var message = db.TblMessage.Find(id);
+            message.IsRead = true;
+            db.SaveChanges();
+            return View(message);
+        }
+        public ActionResult ReadMessages()
+        {
+            var result = db.TblMessage.Where(m => m.IsRead==true).ToList();
+            return View(result);
         }
     }
 }
